@@ -1,8 +1,27 @@
-# React + Vite
+# website name  
+##  contact-management-app
+## live Link : https://contect-management.netlify.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Running the App:
+- git clone https://github.com/RezoanulHasan/contact-management-app/
+- npm install
+- npm run dev
 
-Currently, two official plugins are available:
+## API Endpoints Used:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ ## Worldwide Data of Cases:
+
+- Endpoint: https://disease.sh/v3/covid-19/all
+-This endpoint provides global COVID-19 data, including total cases, recovered cases, deaths, and more.
+
+## Country-Specific Data of Cases:
+
+-Endpoint: https://disease.sh/v3/covid-19/countries
+
+-This endpoint provides COVID-19 data for each country, including cases, deaths, recovered cases, and more.
+
+## Graph Data for Cases with Date:
+- Endpoint: https://disease.sh/v3/covid-19/historical/all?lastdays=all
+  
+-This endpoint provides historical graph data for global COVID-19 cases with dates.
+  
