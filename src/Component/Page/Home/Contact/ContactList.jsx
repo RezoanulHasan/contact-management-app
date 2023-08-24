@@ -177,7 +177,7 @@ const handleBack = () => {
       </>
       )}
 
-      <div className="card-actions justify-center mt-44">
+      <div className="card-actions justify-center mt-52">
       <button  className=" btn  mt-36 btn-outline bg-black text-white py-2 rounded" onClick={handleBack}>Go Back</button>   
       </div>
 
