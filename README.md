@@ -16,12 +16,11 @@
 
 ## Country-Specific Data of Cases:
 
--Endpoint: https://disease.sh/v3/covid-19/countries
+- Endpoint: https://disease.sh/v3/covid-19/countries
 
 -This endpoint provides COVID-19 data for each country, including cases, deaths, recovered cases, and more.
 
 ## Graph Data for Cases with Date:
 - Endpoint: https://disease.sh/v3/covid-19/historical/all?lastdays=all
-  
--This endpoint provides historical graph data for global COVID-19 cases with dates.
+  -This endpoint provides historical graph data for global COVID-19 cases with dates.
   
