@@ -7,7 +7,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 import 'sweetalert2/dist/sweetalert2.min.css';
 import { useNavigate } from 'react-router-dom';
 import useTitle from '../../../../Hooks/useTitle';
-
+import { Fade } from "react-awesome-reveal";
 const ContactList = () => {
 
   useTitle("Contact LisT"); 
@@ -81,6 +81,8 @@ const handleBack = () => {
 
 
   return (
+    <>
+    <Fade direction="down" > 
     <div className="mt-4  m-2  overflow-x-auto">
 
 <h1 className='text-3xl  w-full mb-20 text-center text-white bg-black p-5'>Contact List</h1>
@@ -176,10 +178,12 @@ const handleBack = () => {
       )}
 
       <div className="card-actions justify-center mt-44">
-      <button  className=" btn  mt-20 btn-outline bg-black text-white py-2 rounded" onClick={handleBack}>Go Back</button>   
+      <button  className=" btn  mt-36 btn-outline bg-black text-white py-2 rounded" onClick={handleBack}>Go Back</button>   
       </div>
 
     </div>
+    </Fade>
+    </>
   );
 };
 

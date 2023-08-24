@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addContact } from '../../../../store/contactsSlice';
 import Swal from 'sweetalert2'; // Import SweetAlert2
 import { Link } from 'react-router-dom';
+import { Fade } from "react-awesome-reveal";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -54,6 +55,9 @@ const ContactForm = () => {
 
 
   return (
+
+    <>
+     <Fade direction="down" > 
     <form className="max-w-sm mx-auto p-6 bg-black shadow-md rounded-lg">
      
      <h1 className='mb-5 text-center  text-xl font-bold text-white'>Add  contact info here</h1>
@@ -113,6 +117,9 @@ const ContactForm = () => {
       </Link>
      
     </form>
+    </Fade>
+
+    </>
   );
 };
 
