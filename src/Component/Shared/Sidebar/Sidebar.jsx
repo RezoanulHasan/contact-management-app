@@ -1,26 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Sidebar = () => {
   return (
     <div className="bg-gray-900 text-white h-auto flex flex-col justify-between">
       <div className="p-5">
-        <h1 className="text-2xl font-semibold mb-4">Navigation</h1>
+        <h1 className="text-2xl font-semibold mb-4">Sidebar</h1>
         <ul className="space-y-2">
-          <li>
-            <Link to="/" className="text-blue-500 hover:underline">
-              Home
+          <li className='mt-10 mb-5'>
+            <Link to="/" className="text-white font-bold  hover:text-yellow-400 ">
+           Contact
             </Link>
           </li>
-          <li>
-            <Link to="/show map and chart" className="text-blue-500 hover:underline">
-              Home1
+          <li className='mt-10 mb-20'>
+            <Link to="/show map and chart" className="text-white font-bold   hover:text-yellow-400 ">
+    Chat and Map
             </Link>
           </li>
         </ul>
       </div>
-      <div className="text-center p-3 bg-gray-800">
-        <p className="text-xs">Your app name or footer content</p>
+      <div className="text-center p-3 bg-gray-800  mt-20">
+        <p className="text-xs">contact management app</p>
       </div>
     </div>
   );

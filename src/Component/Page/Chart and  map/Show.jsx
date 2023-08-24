@@ -23,7 +23,7 @@ const Show = () => {
 <Map></Map>
 
 <div className="card-actions justify-center mt-10">
-      <button  className="w-full btn  mt-3 btn-outline bg-black text-white py-2 rounded" onClick={handleBack}>Go Back</button>   
+      <button  className="btn mt-10 btn-outline bg-black text-white py-2 rounded" onClick={handleBack}>Go Back</button>   
       </div>
 
         </div>

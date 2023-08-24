@@ -78,10 +78,13 @@ const handleBack = () => {
 
 
   return (
-    <div className="mt-4    overflow-x-auto">
+    <div className="mt-4  m-2  overflow-x-auto">
 
-<h1 className='text-3xl  w-auto mb-20 text-center text-white bg-black p-5'>Contact List</h1>
-
+<h1 className='text-3xl  w-full mb-20 text-center text-white bg-black p-5'>Contact List</h1>
+{contacts.length === 0 ? (
+       <p className="text-center text-xl font-bold text-red-600 mt-4  hover:text-orange-500">No contact data. Please add some data.</p>
+      ) : (
+        <>
       {isEditing && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-4 rounded shadow-md">
@@ -130,7 +133,7 @@ const handleBack = () => {
             </div>
           </div>
         </div>
-      )}
+        )}
       <table className="w-full border-collapse  table-auto  ">
         <thead>
           <tr className="bg-gray-400 text-gray-700">
@@ -166,9 +169,11 @@ const handleBack = () => {
           ))}
         </tbody>
       </table>
+      </>
+      )}
 
-      <div className="card-actions justify-center mt-10">
-      <button  className="w-full btn  mt-3 btn-outline bg-black text-white py-2 rounded" onClick={handleBack}>Go Back</button>   
+      <div className="card-actions justify-center mt-44">
+      <button  className=" btn  mt-20 btn-outline bg-black text-white py-2 rounded" onClick={handleBack}>Go Back</button>   
       </div>
 
     </div>
