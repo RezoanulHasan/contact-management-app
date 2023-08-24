@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from 'react';
 import Chart from 'chart.js/auto';
 import 'chartjs-adapter-moment';
@@ -111,99 +110,6 @@ Most people infected with the virus will experience mild to moderate respiratory
 };
 
 export default Charts;
-=======
-import React, { useEffect, useState, useRef } from 'react';
-import Chart from 'chart.js/auto';
-import 'chartjs-adapter-moment';
-import moment from 'moment';
-import { useGraphData } from '../../Api/Api';
 
-const Charts = () => {
-  const [data, setData] = useState(null);
-  const chartRef = useRef(null);
-  const graphDataQuery = useGraphData();
 
-  useEffect(() => {
-    if (graphDataQuery.data) {
-      setData(graphDataQuery.data);
-    }
-  }, [graphDataQuery]);
 
-  useEffect(() => {
-    if (data) {
-      const dates = Object.keys(data.cases).map(dateString => moment(dateString));
-      const caseCounts = Object.values(data.cases);
-      const deathCounts = Object.values(data.deaths);
-      const recoveredCounts = Object.values(data.recovered);
-
-      const chart = new Chart(chartRef.current, {
-        type: 'line',
-        data: {
-          labels: dates,
-          datasets: [
-            {
-              label: 'Cases',
-              data: caseCounts,
-              borderColor: 'blue',
-              fill: false,
-            },
-            {
-              label: 'Deaths',
-              data: deathCounts,
-              borderColor: 'red',
-              fill: false,
-            },
-            {
-              label: 'Recovered',
-              data: recoveredCounts,
-              borderColor: 'green',
-              fill: false,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              type: 'time',
-              time: {
-                unit: 'day',
-                tooltipFormat: 'll',
-              },
-              title: {
-                display: true,
-                text: 'Date',
-              },
-            },
-            y: {
-              title: {
-                display: true,
-                text: 'Number of Cases',
-              },
-            },
-          },
-        },
-      });
-
-      chartRef.current = chart;
-    }
-  }, [data]);
-
-  if (graphDataQuery.isLoading) {
-    return <p className='text-white'>.</p>;
-  }
-
-  if (graphDataQuery.isError) {
-    return <p>Error loading data</p>;
-  }
-
-  return (
-    <div className="overflow-x-auto ">
-    <canvas ref={chartRef} className="w-full h-full"></canvas>
-  </div>
-  )
-};
-
-export default Charts;
->>>>>>> 5ac490ad263b9cefc15081f46e2c301d035ab9ce
