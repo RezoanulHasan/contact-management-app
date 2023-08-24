@@ -2,8 +2,11 @@ import React, { useEffect } from 'react';
 import Map from './map';
 import Charts from './Charts';
 import { useNavigate } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 
 const Show = () => {
+
+    useTitle("Map and Chart"); 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

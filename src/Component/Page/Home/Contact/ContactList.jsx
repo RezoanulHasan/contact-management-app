@@ -6,8 +6,11 @@ import Swal from 'sweetalert2';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import 'sweetalert2/dist/sweetalert2.min.css';
 import { useNavigate } from 'react-router-dom';
+import useTitle from '../../../../Hooks/useTitle';
 
 const ContactList = () => {
+
+  useTitle("Contact LisT"); 
   const contacts = useSelector(state => state.contacts);
 const dispatch = useDispatch();
 

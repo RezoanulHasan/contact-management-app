@@ -35,7 +35,7 @@ const router = createBrowserRouter([
 
       {
 
-        path: "show map and chart",
+        path: "mapAndChart",
         element:<Show></Show>,
       },
 
