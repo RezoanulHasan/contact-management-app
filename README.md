@@ -1,5 +1,5 @@
-# website name  
-##  contact-management-app
+# website name - contact-management-app
+
 ## live Link : https://contect-management.netlify.app/
 
 ## Running the App:
